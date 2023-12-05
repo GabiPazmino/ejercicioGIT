@@ -9,85 +9,113 @@
     />
     <title>Luxury Homepage</title>
 
+    <!-- hoja de estilos -->
     <link rel="stylesheet" href="../CSS/style.css" />
   </head>
   <body>
-    <section class="portada">
-      <header id="header">
-        <ul>
-          <li><a href="#">UNIQ</a></li>
-          <li><a href="#">LUXURY</a></li>
-          <li><a href="#">LOGIN</a></li>
-          <li><a href="#">SIGN UP</a></li>
-          <li><a href="#">ESP</a></li>
-          <li><a href="#">ENG</a></li>
-        </ul>
-      </header>
-      <main id="main">
-        <div class="container">
-          <form action="" method="post">
-            <input type="search" placeholder="Ex. Villa Budapest" />
-            <input type="button" />
+    <header id="header">
+      <nav>
+        <!-- <a href="#">UNIQ<span style="color: #ffffff"> LUXURY</span> </a> -->
+        <a href="#"><img src="logo.png" alt="" /></a>
+        <div class="navLinks">
+          <div class="menu">
+            <a href="#">LOGIN</a>
+            <a class="activeTexto" href="#">SIGN UP</a>
+          </div>
+          <div class="barra"></div>
+          <div class="idioma">
+            <a href="#">ESP</a>
+            <a class="activeTexto" href="#">ENG</a>
+            <div class="barra larga"></div>
+            <img src="hamburguesa.png" />
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main id="main">
+      <br /><br /><br /><br /><br /><br />
+      <div class="row">
+        <div class="col-5">
+          <h3>LUXURY</h3>
+          <h1 class="activeTexto">Real Estate</h1>
+          <button>
+            <i class="fa-solid fa-arrow-right fa-sm" style="color: #ffffff"></i>
+            <span>View all properties</span>
+          </button>
+        </div>
+        <div class="col-5">
+          <form action="#" method="get">
+            <input type="text" placeholder="Ex. Villa Budapest" />
+            <button>
+              <i
+                class="fa-solid fa-magnifying-glass fa-sm"
+                style="color: #ffffff"
+              ></i>
+            </button>
           </form>
         </div>
-        <div>
-          <h3>LUXURY</h3>
-          <h1>Real Estate</h1>
-          <button>View all properties</button>
-        </div>
-      </main>
-    </section>
-    <section id="propertiesSale">
-      <div class="container">
-        <div class="row">
-          <div class="col-3">
-            <img
-              src="propertiesSale1.png"
-              alt="casa grande con entrada de arena"
-            />
-          </div>
-          <div class="col-3">
-            <img src="propertiesSale2.png" alt="casa grande con piscina" />
-          </div>
-          <div class="col-3">
-            <img
-              src="propertiesSale3.png"
-              alt="casa tipo castillo con areas verdes"
-            />
-          </div>
-          <div class="col-3">
-            <h3>Worldwide gallery</h3>
-            <h2>Properties for sale</h2>
-          </div>
+      </div>
+    </main>
+
+    <section id="propertiesSale" class="container">
+      <div class="padre item">
+        <img
+          src="propertiesSale1.png"
+          alt="casa grande con entrada de arena"
+          width="200vw"
+        />
+        <div class="leyenda">
+          <p>France</p>
+          <h5>Marseilles</h5>
         </div>
       </div>
-    </section>
-    <section id="propertiesSaleRent" class="container">
-      <div class="row">
-        <div class="col-3">
-          <h3>Worldwide gallery</h3>
-          <h2>Properties for rent</h2>
-          <p>
-            In an ultimate jetsetter location or a forever home, our experts
-            have the expertise it takes to knowledgeably advise you at every
-            stage of the property cycle.
-          </p>
-        </div>
-        <div class="col-3">
-          <img src="propertiesRent1.png" alt="casa antigua de ladrillo" />
-        </div>
-        <div class="col-3">
-          <img src="propertiesRent2.png" alt="casa campestre con árboles" />
-        </div>
-        <div class="col-3">
-          <img src="propertiesRent3.png" alt="casa moderna con piscina" />
+
+      <div class="padre item">
+        <img src="propertiesSale2.png" alt="casa grande con piscina" />
+        <div class="leyenda">
+          <p>France</p>
+          <h5>Marseilles</h5>
         </div>
       </div>
+      <div class="padre item">
+        <img
+          src="propertiesSale3.png"
+          alt="casa tipo castillo con areas verdes"
+        />
+        <div class="leyenda">
+          <p>England</p>
+          <h5>Glasgow</h5>
+        </div>
+      </div>
+      <div class="item">
+        <h3>Worldwide gallery</h3>
+        <h2>Properties for sale</h2>
+      </div>
     </section>
-    <section id="propertiesDevelopments" class="container">
+    <section id="propertiesRent" class="container">
+      <div>
+        <h3>Worldwide gallery</h3>
+        <h2>Properties for rent</h2>
+        <p>
+          In an ultimate jetsetter location or a forever home, our experts have
+          the expertise it takes to knowledgeably advise you at every stage of
+          the property cycle.
+        </p>
+      </div>
+      <div>
+        <img src="propertiesRent1.png" alt="casa antigua de ladrillo" />
+      </div>
+      <div>
+        <img src="propertiesRent2.png" alt="casa campestre con árboles" />
+      </div>
+      <div>
+        <img src="propertiesRent3.png" alt="casa moderna con piscina" />
+      </div>
+    </section>
+    <section id="propertiesDevelopments">
       <h3>Luxury properties</h3>
       <h2>Developments</h2>
-      <div class="developmentsFilaUno row">
+      <div class="developmentsFilaUno container">
         <div>
           <img
             src="developments1_1.png"
@@ -113,7 +141,9 @@
           />
         </div>
       </div>
-      <div class="developmentsFilaDos row">
+      <br />
+
+      <div class="developmentsFilaDos container">
         <div>
           <img
             src="developments2_1.png"
@@ -140,59 +170,93 @@
         </div>
       </div>
     </section>
+    <br />
     <section id="services">
-      <h3>Services</h3>
-      <h2>Art Curation & Interior Design</h2>
-      <div><img src="services.png" alt="diseño interior de una sala" /></div>
-      <div><h2></h2></div>
-    </section>
-    <section class="subscribe">
-      <div>
-        <h3>Join the list</h3>
-        <h2>Unlock the exclusive world</h2>
-      </div>
-      <div>
-        <form action="post">
-          <input type="text" name="Name: " />
-          <input type="email" placeholder="Ex. name@mail.com" />
-          <input type="submit" value="Submit" />
-        </form>
-      </div>
-    </section>
-    <footer>
-      <div>
-        <ul>
-          <li>uniq</li>
-          <li>luxury</li>
-          <li>Become a New Uniq Artist Become a Commercial Partner</li>
-        </ul>
-      </div>
-      <div>
-        <ul>
-          <li>Suites</li>
-          <li>Cities</li>
-          <li>Villas</li>
-        </ul>
-      </div>
-      <div>
-        <ul>
-          <li>Houses</li>
-          <li>Apartaments</li>
-          <br />
-          <li>Contact us</li>
-        </ul>
-      </div>
+      <div class="container">
+        <div id="relleno">
+          <div id="imagenContenedor">
+            <img src="services.png" alt="diseño interior de una sala" />
+          </div>
+        </div>
 
-      <div>
-        <ul>
-          <li>Call Center</li>
-          <li>+52 55 6840 4000</li>
-          <li>concierge@uniqluxury.com</li>
-        </ul>
+        <div>
+          <h3>Services</h3>
+          <h2>Art Curation & Interior Design</h2>
+          <p>
+            In an ultimate jetsetter location or a forever home, our experts
+            have the expertise it takes to knowledgeably advise you at every
+            stage of the property cycle.
+          </p>
+        </div>
       </div>
-      <div>
+    </section>
+    <br />
+
+    <footer>
+      <div class="subscribe container">
+        <div class="item">
+          <h3>Join the list</h3>
+          <h2 class="activeTexto">Unlock the exclusive world</h2>
+        </div>
+        <div class="item">
+          <form action="post">
+            <label class="nameForm" for="name">Name: </label>
+            <input class="nameForm" type="text" name="name" />
+            <input
+              id="emailForm"
+              type="email"
+              placeholder="Ex. name@mail.com"
+            />
+            <input type="submit" value="Submit" id="botonForm" />
+          </form>
+        </div>
+      </div>
+      <div class="container">
+        <div class="item">
+          <ul>
+            <li>
+              <img src="logo.png" alt="" />
+              <!-- <a href="#"> UNIQ<span style="color: #ffffff"> LUXURY</span> </a> -->
+            </li>
+
+            <li>Become a New Uniq Artist Become a Commercial Partner</li>
+          </ul>
+        </div>
+        <div class="item">
+          <ul>
+            <li>Suites</li>
+            <li>Cities</li>
+            <li>Villas</li>
+          </ul>
+        </div>
+        <div class="item">
+          <ul>
+            <li class="activeTexto">Houses</li>
+            <li>Apartaments</li>
+            <br />
+            <li>Contact us</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <ul>
+            <li>Call Center</li>
+            <li class="activeTexto">+52 55 6840 4000</li>
+            <li>concierge@uniqluxury.com</li>
+          </ul>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div class="footer-bar"></div>
+      <div id="copyright">
+        <br />
         <h4>Copyright © 2022</h4>
       </div>
+      <br />
     </footer>
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/ba0ece2d64.js"></script>
   </body>
 </html>
