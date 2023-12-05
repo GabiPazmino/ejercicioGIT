@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-
   box-sizing: border-box;
   color: #b4b7b7;
 }
@@ -12,12 +11,25 @@
 
 h3 {
   color: #df991b;
-  font-size: 20px;
+  font-size: 40px;
 }
 
-h2,
+#empresa {
+  font-size: 40px;
+  color: #b4b7b7;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h2 {
+  color: #000;
+}
+
 h5 {
   color: black;
+  font-size: 40px;
 }
 
 ul li {
@@ -36,10 +48,28 @@ a {
   align-items: center;
   width: 100vw;
 }
+
 .item {
   margin: 5px 5px;
 }
 
+section {
+  margin: 10% 0;
+}
+
+.botonSection {
+  background-color: transparent;
+  border: solid 2px white;
+  border-radius: 20px;
+  padding: 6px 32px;
+  width: fit-content;
+  color: white;
+  font-size: 20px;
+  margin: 49px 0;
+  justify-content: end;
+}
+
+/* encabezado */
 header nav {
   position: fixed;
   display: flex;
@@ -51,21 +81,12 @@ header nav {
   background: rgba(255, 255, 255, 0.5);
 }
 
-header nav img {
-  height: 20px;
-  object-fit: cover;
-  width: auto;
-}
-
-.idioma img {
-  width: 30px;
-}
-
 .navLinks {
   display: flex;
   gap: 64px;
   margin-right: 30px;
 }
+
 .menu,
 .idioma {
   display: flex;
@@ -73,6 +94,19 @@ header nav img {
   gap: 16px;
 }
 
+/* logo */
+header nav img {
+  height: 20px;
+  object-fit: cover;
+  width: auto;
+}
+
+/* hamburguesa */
+.idioma img {
+  width: 30px;
+}
+
+/* divisiones entre links del encabezado */
 .barra {
   width: 1px;
   background-color: white;
@@ -83,15 +117,55 @@ header nav img {
   height: 32px;
 }
 
+/* portada */
 #main {
-  width: 100vw;
+  width: 100%;
   height: 130vh;
   background-image: url("/Terminal/IMG/portada.png");
   background-position: center;
   background-size: cover;
   object-position: top -300px right 0;
+  overflow-x: hidden;
 
-  /* overflow-x: hidden; */
+  fill: linear-gradient(270deg, #000 -37.96%, #7e7e7e 62.04%);
+  stroke-width: 1px;
+  stroke: #000;
+  mix-blend-mode: overlay;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#main input {
+  background-color: transparent;
+  border: solid 2px white;
+  border-radius: 20px;
+  padding: 16px 42px;
+  width: 100%;
+  height: 100%;
+  color: orange;
+  justify-content: end;
+  font-size: 20px;
+}
+
+.potadaMarca {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: start; */
+  align-content: end;
+}
+
+/* input de la portada donde está la lupa */
+.padreLupa {
+  position: relative;
+  width: fit-content;
+  justify-content: end;
+}
+
+/* ícono de lupa */
+.lupa {
+  position: absolute;
+  right: 30px;
+  top: 40%;
+  transform: translate(0, -50%);
 }
 
 #propertiesSale img,
@@ -111,6 +185,7 @@ header nav img {
   height: 9.5%;
   text-align: center;
 }
+
 #propertiesSale .padre .leyenda:hover {
   background-color: white;
 }
@@ -118,6 +193,10 @@ header nav img {
 #propertiesDevelopments img {
   width: 407px;
   height: 407px;
+}
+
+#propertiesDevelopments {
+  text-align: center;
 }
 
 #services img {
