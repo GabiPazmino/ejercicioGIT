@@ -1,46 +1,42 @@
+/* ESTILOS GENERALES */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: #b4b7b7;
 }
-
 .activeTexto {
   color: #fff;
 }
-
 h3 {
   color: #df991b;
   font-size: 40px;
 }
-
 #empresa {
   font-size: 40px;
   color: #b4b7b7;
 }
-
 h1 {
   font-size: 80px;
 }
-
 h2 {
   color: #000;
+  font-size: 80px;
 }
-
 h5 {
   color: black;
   font-size: 40px;
 }
-
+p {
+  font-size: 30px;
+}
 ul li {
   list-style: none;
 }
-
 a {
   text-decoration: none;
   color: #b4b7b7;
 }
-
 .container {
   display: flex;
   flex-direction: row;
@@ -49,77 +45,87 @@ a {
   width: 100vw;
 }
 
-.item {
-  margin: 5px 5px;
+.containerMain {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+/* grid sección 1 y 2 (sales y Rent) */
+.properties {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.properties .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.containerImagen {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  gap: 20px;
+  overflow-x: hidden;
+}
+.itemImagen {
+  grid-column: span 5;
+
+  overflow: hidden;
+}
+.active {
+  grid-column: span 2;
+  overflow: hidden;
 }
 
 section {
   margin: 10% 0;
 }
 
-.botonSection {
-  background-color: transparent;
-  border: solid 2px white;
-  border-radius: 20px;
-  padding: 6px 32px;
-  width: fit-content;
-  color: white;
-  font-size: 20px;
-  margin: 49px 0;
-  justify-content: end;
-}
-
-/* encabezado */
+/* ENCABEZADO */
+/* BARRA DE NAVEGACIÓN */
 header nav {
   position: fixed;
   display: flex;
   width: 100%;
+  height: 100px;
   padding: 15px;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #ffffff80;
-  background: rgba(255, 255, 255, 0.5);
 }
-
 .navLinks {
   display: flex;
   gap: 64px;
   margin-right: 30px;
 }
-
 .menu,
 .idioma {
   display: flex;
   align-items: center;
   gap: 16px;
 }
-
-/* logo */
-header nav img {
+/* LOGO EMPRESA */
+.logo {
   height: 20px;
   object-fit: cover;
   width: auto;
 }
-
-/* hamburguesa */
+/* MENÚ TIPO HAMBURGUESA */
 .idioma img {
   width: 30px;
 }
-
-/* divisiones entre links del encabezado */
+/* DIVISIONES ENTRE LOS LINKS DEL ENCABEZADO */
 .barra {
   width: 1px;
   background-color: white;
   height: 16px;
 }
-
 .larga {
   height: 32px;
 }
 
-/* portada */
+/* PORTADA */
 #main {
-  width: 100%;
+  width: cover-fit;
   height: 130vh;
   background-image: url("/Terminal/IMG/portada.png");
   background-position: center;
@@ -127,93 +133,214 @@ header nav img {
   object-position: top -300px right 0;
   overflow-x: hidden;
 
-  fill: linear-gradient(270deg, #000 -37.96%, #7e7e7e 62.04%);
-  stroke-width: 1px;
-  stroke: #000;
+  /* mask-image: llinear-gradient(270deg, #000 -37.96%, #7e7e7e 62.04%);
   mix-blend-mode: overlay;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  stroke-width: 1px;
+  stroke: #000; */
 }
-
+/* LADO DERECHO: BUSCADOR DE SITIOS*/
 #main input {
   background-color: transparent;
-  border: solid 2px white;
-  border-radius: 20px;
-  padding: 16px 42px;
-  width: 100%;
+  border-radius: 100px;
   height: 100%;
-  color: orange;
   justify-content: end;
   font-size: 20px;
+  padding: 24px 56px 24px 0;
+  width: fit-content;
+  border: solid 1px #ffffff;
+  color: #fff;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 390;
 }
-
-.potadaMarca {
+#main input::placeholder {
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 390;
+  line-height: 45px;
+  padding: 22px 294px 19px 44px;
+}
+/* INPUT */
+.padreLupa {
   display: flex;
   flex-direction: row;
-  /* justify-content: start; */
-  align-content: end;
-}
-
-/* input de la portada donde está la lupa */
-.padreLupa {
+  justify-content: center;
+  align-items: center;
   position: relative;
-  width: fit-content;
-  justify-content: end;
 }
-
-/* ícono de lupa */
+/* ÍCONO DE LUPA */
 .lupa {
   position: absolute;
-  right: 30px;
-  top: 40%;
+  left: 800px;
+  top: 50%;
   transform: translate(0, -50%);
 }
-
-#propertiesSale img,
-#propertiesRent img {
-  width: 407px;
-  height: 550px;
+/* LADO IZQUIERDO: MARCA DE LA EMPRESA */
+.potadaMarca {
+  display: grid;
+  grid-template-columns: 12 1fr;
+  grid-column: 2 / 5;
+}
+/* BOTON QUE LLEVA AL PORTAFOLIO */
+.botonMain {
+  background-color: transparent;
+  border-radius: 100px;
+  padding: 24px 56px 24px 0;
+  width: fit-content;
+  justify-content: end;
+  border: solid 1px #ffffff;
+  color: #fff;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 390;
+  margin-top: 100px;
+}
+#main button img {
+  padding-right: 30px;
+  padding-left: 55px;
 }
 
-#propertiesSale .padre {
+/* SECCIONES */
+/* BOTONES TIPO FORM */
+
+.botonSection {
+  background-color: transparent;
+  padding: 24px 70px 24px 69px;
+  width: fit-content;
+  justify-content: end;
+  margin: 49px 0;
+  border-radius: 100px;
+  border: 1px solid #000;
+  color: #000;
+  text-align: center;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 390;
+  line-height: 45px; /* 150% */
+}
+/* TAMAÑO DE IMÁGENES DE LAS DOS PRIMERAS SECCIONES */
+.propertiesImg {
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+}
+
+/* IMAGENES PARA SOBREPONER LEYENDA */
+.properties .padre {
   position: relative;
 }
 
-#propertiesSale .padre .leyenda {
+/* LEYENDA SOBREPUESTA EN LAS IMÁGENES */
+.properties .padre .leyenda {
   position: absolute;
-  top: 90%;
+  top: 80%;
   width: 100%;
-  height: 9.5%;
+  height: 19.3%;
   text-align: center;
 }
-
-#propertiesSale .padre .leyenda:hover {
+/* EFECTO DE LA LEYENDA SOBRE LAS IMÁGENES SECCIÓN 1 Y 2*/
+.leyenda:hover {
   background-color: white;
+  color: black;
 }
 
+/* TAMAÑO IMÁGENES GALERÍA */
 #propertiesDevelopments img {
   width: 407px;
   height: 407px;
 }
-
-#propertiesDevelopments {
+#propertiesDevelopments .item {
+  position: relative;
+}
+#propertiesDevelopments .leyenda {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  position: absolute;
+  top: 80%;
+  width: 100%;
+  height: 19.3%;
   text-align: center;
 }
-
-#services img {
-  width: 407px;
-  height: 407px;
+/* ALIÑADO TÍTULO SECCIÓN GALERÍA */
+#propertiesDevelopments {
+  text-align: center;
+  margin-bottom: 80px;
+}
+/* flechas prev y next de galería */
+.flechasGaleria {
+  width: 15px;
+  height: 30px;
 }
 
+.botonFlechasNext {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+.contenedorBotonesFlechas {
+  display: flex;
+  gap: 40px;
+}
+/* SECCIÓN SERVICIOS CUADRO NEGRO DETRÁS DE IMAGEN*/
+#relleno {
+  width: 670px;
+  height: 1011px;
+  z-index: -1;
+  background-color: #26282b;
+  position: relative;
+  margin-bottom: 124px;
+  margin-left: 122px;
+}
+/* IMAGEN SOBRE EL RELLENO NEGRO */
+#imagenContenedor {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+}
+/* TAMAÑO IMAGEN SECCIÓN SERVICIOS */
+#imagenContenedor {
+  width: 830px;
+  height: 830px;
+}
+.containerServices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.itemServicesFoto {
+  grid-column: 1 / 8;
+}
+.itemServices {
+  grid-column: 9 / 12;
+}
+.divisorServices {
+  display: flex;
+  width: 30vw;
+  height: 4px;
+  background-color: #df991b;
+  margin-top: 12%;
+  margin-left: 2%;
+}
+
+/* FOOTER */
+/* PARTE SUPERIOR SOBRE EL FOOTER */
 .subscribe {
   background-color: #26282b;
   color: #fff;
   font-size: 32px;
-  transform: translate(0, -50%);
+  transform: translate(0, -70%);
+  position: absolute;
+  left: 122px;
   display: flex;
   gap: 16px;
   padding: 16px 50px;
+  width: 90%;
+  height: 312px;
 }
-
+/* INPUT NOMBRE */
 .nameForm {
   background-color: transparent;
   color: #fff;
@@ -223,7 +350,7 @@ header nav img {
   width: 100%;
   font-size: 20px;
 }
-
+/* INPUT EMAIL */
 #emailForm {
   background-color: transparent;
   border: solid 2px grey;
@@ -232,6 +359,7 @@ header nav img {
   width: 100%;
 }
 
+/* FORMATO BOTON DEL FORM */
 footer #botonForm {
   background-color: transparent;
   border: solid 2px orange;
@@ -239,45 +367,24 @@ footer #botonForm {
   padding: 6px 32px;
   width: fit-content;
   color: orange;
-  justify-content: end;
 }
 
-#relleno {
-  width: 380px;
-  height: 670px;
-  z-index: -1;
-  background-color: #26282b;
-  position: relative;
-  left: 2%;
-}
-
-#imagenContenedor {
-  position: absolute;
-  top: 20%;
-  left: 20%;
-}
-
+/* FOOTER PARTE INFERIOR */
 footer {
   background-color: #000;
   position: relative;
   width: 100%;
   display: grid;
   justify-content: center;
-  margin-top: 100px;
+  padding-top: 200px;
 }
-
-footer img {
-  height: 20px;
-  object-fit: cover;
-  width: auto;
-}
-
+/* DIVISIÓN DEL PIE DE COPYRIGHT */
 .footer-bar {
   width: 100%;
   height: 3px;
   background-color: white;
 }
-
+/* SECCIÓN COPYRIGHT */
 #copyright {
   text-align: center;
   margin-bottom: 16px;

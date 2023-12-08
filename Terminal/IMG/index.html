@@ -15,8 +15,7 @@
   <body>
     <header id="header">
       <nav>
-        <!-- <a href="#">UNIQ<span style="color: #ffffff"> LUXURY</span> </a> -->
-        <a href="#"><img src="logo.png" alt="" /></a>
+        <a href="#"><img class="logo" src="logo.png" alt="" /></a>
         <div class="navLinks">
           <div class="menu">
             <a href="#">LOGIN</a>
@@ -32,67 +31,86 @@
         </div>
       </nav>
     </header>
-    <main id="main" class="container">
+    <main id="main" class="containerMain">
       <br /><br /><br /><br /><br /><br />
+
+      <div class="item padreLupa">
+        <form action="#" method="get">
+          <input type="text" placeholder="Ex. Villa Budapest" />
+          <img class="lupa" src="lupaMain.svg" alt="ícono de lupa" />
+        </form>
+      </div>
 
       <div class="item portadaMarca">
         <h3 id="empresa">LUXURY</h3>
         <h1 class="activeTexto">Real Estate</h1>
-        <button class="botonSection">
-          <i class="fa-solid fa-arrow-right fa-lg" style="color: #ffffff"></i>
+        <button class="botonMain">
+          <img src="flechaBotonMain.svg" alt="ícono de flecha" />
           View all properties
         </button>
       </div>
-      <div class="item padreLupa">
-        <form action="#" method="get">
-          <input type="text" placeholder="Ex. Villa Budapest" />
-          <button>
-            <i
-              class="fa-solid fa-magnifying-glass fa-sm lupa"
-              style="color: #ffffff"
-            ></i>
-          </button>
-        </form>
-      </div>
     </main>
 
-    <section id="propertiesSale" class="container">
-      <div class="padre item">
-        <img
-          src="propertiesSale1.png"
-          alt="casa grande con entrada de arena"
-          width="200vw"
-        />
-        <div class="leyenda">
-          <p>France</p>
-          <h5>Marseilles</h5>
+    <section class="properties">
+      <div class="containerImagen">
+        <div class="padre itemImagen active">
+          <img
+            class="propertiesImg"
+            src="propertiesSale1.png"
+            alt="casa grande con entrada de arena"
+            width="200vw"
+          />
+          <div class="leyenda">
+            <p>France</p>
+            <h5>Marseilles</h5>
+          </div>
         </div>
-      </div>
 
-      <div class="padre item">
-        <img src="propertiesSale2.png" alt="casa grande con piscina" />
-        <div class="leyenda">
-          <p>France</p>
-          <h5>Marseilles</h5>
+        <div class="padre itemImagen">
+          <img
+            class="propertiesImg"
+            src="propertiesSale2.png"
+            alt="casa grande con piscina"
+          />
+          <div class="leyenda">
+            <p>France</p>
+            <h5>Marseilles</h5>
+          </div>
         </div>
-      </div>
-      <div class="padre item">
-        <img
-          src="propertiesSale3.png"
-          alt="casa tipo castillo con areas verdes"
-        />
-        <div class="leyenda">
-          <p>England</p>
-          <h5>Glasgow</h5>
+        <div class="padre itemImagen">
+          <img
+            class="propertiesImg"
+            src="propertiesSale3.png"
+            alt="casa tipo castillo con areas verdes"
+          />
+          <div class="leyenda">
+            <p>England</p>
+            <h5>Glasgow</h5>
+          </div>
         </div>
       </div>
       <div class="item">
         <h3>Worldwide gallery</h3>
         <h2>Properties for sale</h2>
+
+        <div class="contenedorBotonesFlechas">
+          <button class="botonFlechasNext">
+            <img src="prev.png" alt="flecha de previa" /> PREV
+          </button>
+          <button class="botonSection">View all properties</button>
+          <button class="botonFlechasNext">
+            NEXT
+            <img
+              class="flechasGaleria"
+              src="next.png"
+              alt="flecha de siguiente"
+            />
+          </button>
+        </div>
       </div>
     </section>
-    <section id="propertiesRent" class="container">
-      <div>
+    <section class="properties">
+      <div class="item">
         <h3>Worldwide gallery</h3>
         <h2>Properties for rent</h2>
         <p>
@@ -100,15 +118,55 @@
           the expertise it takes to knowledgeably advise you at every stage of
           the property cycle.
         </p>
+        <div class="contenedorBotonesFlechas">
+          <button class="botonFlechasNext">
+            <img src="prev.png" alt="flecha de previa" /> PREV
+          </button>
+          <button class="botonSection">View all properties</button>
+          <button class="botonFlechasNext">
+            NEXT
+            <img
+              class="flechasGaleria"
+              src="next.png"
+              alt="flecha de siguiente"
+            />
+          </button>
+        </div>
       </div>
-      <div>
-        <img src="propertiesRent1.png" alt="casa antigua de ladrillo" />
-      </div>
-      <div>
-        <img src="propertiesRent2.png" alt="casa campestre con árboles" />
-      </div>
-      <div>
-        <img src="propertiesRent3.png" alt="casa moderna con piscina" />
+      <div class="containerImagen">
+        <div class="padre itemImagen">
+          <img
+            class="propertiesImg"
+            src="propertiesRent1.png"
+            alt="casa antigua de ladrillo"
+          />
+          <div class="leyenda">
+            <p>France</p>
+            <h5>Carcassonne</h5>
+          </div>
+        </div>
+        <div class="padre itemImagen">
+          <img
+            class="propertiesImg"
+            src="propertiesRent2.png"
+            alt="casa campestre con árboles"
+          />
+          <div class="leyenda">
+            <p>Germany</p>
+            <h5>Munich</h5>
+          </div>
+        </div>
+        <div class="padre itemImagen active">
+          <img
+            class="propertiesImg"
+            src="propertiesRent3.png"
+            alt="casa moderna con piscina"
+          />
+          <div class="leyenda">
+            <p>France</p>
+            <h5>Glasgow</h5>
+          </div>
+        </div>
       </div>
     </section>
     <section id="propertiesDevelopments">
@@ -116,70 +174,110 @@
       <h2>Developments</h2>
       <br /><br />
       <div class="developmentsFilaUno container">
-        <div>
+        <div class="item">
           <img
             src="developments1_1.png"
             alt="sala en la terraza con vista a la ciudad"
           />
+          <div class="leyenda">
+            <p>The Surf Row</p>
+            <h5>Surfside</h5>
+          </div>
         </div>
-        <div>
+        <div class="item">
           <img
             src="developments1_2.png"
             alt="edificio de departamentos con área verde"
           />
+          <div class="leyenda">
+            <p>Indigo</p>
+            <h5>Vero Beach</h5>
+          </div>
         </div>
-        <div>
+        <div class="item">
           <img
             src="developments1_3.png"
             alt="casa con palmeras y tres piscinas pequeñas"
           />
+          <div class="leyenda">
+            <p>Rosewood Baha Mar</p>
+            <h5>Nassau, the Bahamas</h5>
+          </div>
         </div>
-        <div>
+        <div class="item">
           <img
             src="developments1_4.png"
             alt="parte de un edificio rodeado de agua"
           />
+          <div class="leyenda">
+            <p>St. Regis The Astor Tower</p>
+            <h5>Brickell, Miami</h5>
+          </div>
         </div>
       </div>
       <br />
 
       <div class="developmentsFilaDos container">
-        <div>
+        <div class="item">
           <img
             src="developments2_1.png"
             alt="edificio tipo palacio en la ciudad"
           />
+          <div class="leyenda">
+            <p>Giralda Place</p>
+            <h5>Coral Gables</h5>
+          </div>
         </div>
-        <div>
+        <div class="item">
           <img
             src="developments2_2.png"
             alt="dos torres de edificios grandes cerca del mar"
           />
+          <div class="leyenda">
+            <p>St. Regis - The William Tower</p>
+            <h5>Brickell, Miami</h5>
+          </div>
         </div>
-        <div>
+        <div class="item">
           <img
             src="developments2_3.png"
             alt="sala en espacio sin paredes con vista al mar y montañas"
           />
+          <div class="leyenda">
+            <p>Solterre at Cockleshell Bay</p>
+            <h5>St. Kitts and nevis</h5>
+          </div>
         </div>
-        <div>
+        <div class="item">
           <img
             src="developments2_4.png"
             alt="edificio pequeño de oficinas con grandes ventanas de vidrio"
           />
+          <div class="leyenda">
+            <p>Urbin</p>
+            <h5>Coconut Grove</h5>
+          </div>
         </div>
       </div>
     </section>
     <br />
     <section id="services">
-      <div class="container">
-        <div id="relleno">
+      <div class="containerServices">
+        <div id="relleno" class="itemSericesFoto">
           <div id="imagenContenedor">
             <img src="services.png" alt="diseño interior de una sala" />
           </div>
         </div>
 
-        <div>
+        <div class="itemSerices" style="margin-bottom: 20%; margin-left: 5%">
+          <div style="display: flex">
+            <img
+              src="logoServices.png"
+              alt="imagen del logo de la empresa"
+              style="margin-top: 10%; margin-bottom: 20%; display: flex"
+            />
+            <div class="divisorServices"></div>
+          </div>
           <h3>Services</h3>
           <h2>Art Curation & Interior Design</h2>
           <p>
@@ -187,6 +285,22 @@
             have the expertise it takes to knowledgeably advise you at every
             stage of the property cycle.
           </p>
+          <br /><br /><br />
+
+          <div class="contenedorBotonesFlechas">
+            <button class="botonFlechasNext">
+              <img src="prev.png" alt="flecha de previa" /> PREV
+            </button>
+            <button class="botonSection">Contact us</button>
+            <button class="botonFlechasNext">
+              NEXT
+              <img
+                class="flechasGaleria"
+                src="next.png"
+                alt="flecha de siguiente"
+              />
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -215,8 +329,7 @@
         <div class="item">
           <ul>
             <li>
-              <img src="logo.png" alt="" />
-              <!-- <a href="#"> UNIQ<span style="color: #ffffff"> LUXURY</span> </a> -->
+              <img class="logo" src="logo.png" alt="" />
             </li>
 
             <li>Become a New Uniq Artist Become a Commercial Partner</li>
@@ -255,8 +368,5 @@
       </div>
       <br />
     </footer>
-
-    <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/ba0ece2d64.js"></script>
   </body>
 </html>
