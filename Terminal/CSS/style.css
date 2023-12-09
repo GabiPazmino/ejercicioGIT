@@ -3,32 +3,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #b4b7b7;
 }
 .activeTexto {
   color: #fff;
 }
+h6 {
+  font-size: 26px;
+}
 h3 {
   color: #df991b;
-  font-size: 40px;
-}
-#empresa {
-  font-size: 40px;
-  color: #b4b7b7;
+  font-size: 20px;
 }
 h1 {
-  font-size: 80px;
+  font-size: 50px;
 }
 h2 {
   color: #000;
-  font-size: 80px;
+  font-size: 30px;
 }
 h5 {
   color: black;
-  font-size: 40px;
+  font-size: 26px;
 }
 p {
-  font-size: 30px;
+  font-size: 20px;
 }
 ul li {
   list-style: none;
@@ -37,45 +35,6 @@ a {
   text-decoration: none;
   color: #b4b7b7;
 }
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 100vw;
-}
-
-.containerMain {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-/* grid sección 1 y 2 (sales y Rent) */
-.properties {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.properties .item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.containerImagen {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-
-  gap: 20px;
-  overflow-x: hidden;
-}
-.itemImagen {
-  grid-column: span 5;
-
-  overflow: hidden;
-}
-.active {
-  grid-column: span 2;
-  overflow: hidden;
-}
-
 section {
   margin: 10% 0;
 }
@@ -86,11 +45,12 @@ header nav {
   position: fixed;
   display: flex;
   width: 100%;
-  height: 100px;
-  padding: 15px;
+  height: 10%;
+  padding-left: 15px;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #ffffff80;
+  background-color: rgb(0 0 0 / 40%);
 }
 .navLinks {
   display: flex;
@@ -104,6 +64,9 @@ header nav {
   gap: 16px;
 }
 /* LOGO EMPRESA */
+.mobileLogo {
+  display: none;
+}
 .logo {
   height: 20px;
   object-fit: cover;
@@ -125,156 +88,164 @@ header nav {
 
 /* PORTADA */
 #main {
-  width: cover-fit;
-  height: 130vh;
-  background-image: url("/Terminal/IMG/portada.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/Terminal/IMG/portada.png");
+  height: 125vh;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   object-position: top -300px right 0;
-  overflow-x: hidden;
-
-  /* mask-image: llinear-gradient(270deg, #000 -37.96%, #7e7e7e 62.04%);
-  mix-blend-mode: overlay;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  stroke-width: 1px;
-  stroke: #000; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#empresa {
+  font-size: 30px;
+  color: #b4b7b7;
 }
 /* LADO DERECHO: BUSCADOR DE SITIOS*/
 #main input {
   background-color: transparent;
   border-radius: 100px;
   height: 100%;
-  justify-content: end;
-  font-size: 20px;
-  padding: 24px 56px 24px 0;
+  padding: 20px 180px 20px 0;
   width: fit-content;
   border: solid 1px #ffffff;
-  color: #fff;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 390;
 }
 #main input::placeholder {
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 390;
   line-height: 45px;
-  padding: 22px 294px 19px 44px;
+  padding-left: 20px;
+  width: 100%;
+  height: 8vh;
 }
 /* INPUT */
 .padreLupa {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: start;
   align-items: center;
   position: relative;
+  margin-top: 10%;
+  margin-right: 5%;
 }
 /* ÍCONO DE LUPA */
 .lupa {
   position: absolute;
-  left: 800px;
-  top: 50%;
+  right: 5%;
+  top: 4.5%;
   transform: translate(0, -50%);
 }
 /* LADO IZQUIERDO: MARCA DE LA EMPRESA */
-.potadaMarca {
-  display: grid;
-  grid-template-columns: 12 1fr;
-  grid-column: 2 / 5;
+#portadaMarca {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-top: 15%;
+  margin-left: 5%;
 }
 /* BOTON QUE LLEVA AL PORTAFOLIO */
 .botonMain {
   background-color: transparent;
   border-radius: 100px;
-  padding: 24px 56px 24px 0;
-  width: fit-content;
-  justify-content: end;
+  width: 100%;
+  height: 8vh;
   border: solid 1px #ffffff;
   color: #fff;
-  font-size: 30px;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 390;
-  margin-top: 100px;
+  /* font-weight: 390; */
+  margin-top: 80px;
+  position: relative;
 }
-#main button img {
-  padding-right: 30px;
-  padding-left: 55px;
+.flechaMain {
+  position: absolute;
+  left: 6%;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
 /* SECCIONES */
 /* BOTONES TIPO FORM */
-
+/* grid sección 1 y 2 (sales y Rent) */
+.properties {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.properties .item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+}
+.itemSales {
+  align-items: end;
+  margin: 5% 17% 0 5%;
+}
+.itemRent {
+  align-items: start;
+  margin: 5% 5% 0 17%;
+}
+.containerImagen {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  overflow-x: hidden;
+}
+.itemImagen {
+  grid-column: span 5;
+  overflow: hidden;
+}
+.active {
+  grid-column: span 2;
+  overflow: hidden;
+}
 .botonSection {
   background-color: transparent;
-  padding: 24px 70px 24px 69px;
+  padding: 5px 50px;
   width: fit-content;
-  justify-content: end;
-  margin: 49px 0;
   border-radius: 100px;
   border: 1px solid #000;
   color: #000;
-  text-align: center;
-  font-size: 30px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 390;
-  line-height: 45px; /* 150% */
+  line-height: 45px;
 }
-/* TAMAÑO DE IMÁGENES DE LAS DOS PRIMERAS SECCIONES */
+/* TAMAÑO DE IMÁGENES DE LAS DOS PRIMERAS SECCIONES SALES Y RENT */
 .propertiesImg {
   width: 100%;
-  height: 550px;
+  height: 100%;
+  object-fit: cover;
   overflow: hidden;
 }
-
 /* IMAGENES PARA SOBREPONER LEYENDA */
 .properties .padre {
   position: relative;
 }
-
 /* LEYENDA SOBREPUESTA EN LAS IMÁGENES */
 .properties .padre .leyenda {
   position: absolute;
-  top: 80%;
+  bottom: 0%;
   width: 100%;
-  height: 19.3%;
   text-align: center;
 }
+.containerImagen .leyenda {
+  color: white;
+}
 /* EFECTO DE LA LEYENDA SOBRE LAS IMÁGENES SECCIÓN 1 Y 2*/
-.leyenda:hover {
+.itemImagen:hover .leyenda {
   background-color: white;
   color: black;
 }
 
-/* TAMAÑO IMÁGENES GALERÍA */
-#propertiesDevelopments img {
-  width: 407px;
-  height: 407px;
-}
-#propertiesDevelopments .item {
-  position: relative;
-}
-#propertiesDevelopments .leyenda {
-  cursor: pointer;
-  background-color: white;
-  color: black;
-  position: absolute;
-  top: 80%;
-  width: 100%;
-  height: 19.3%;
-  text-align: center;
-}
-/* ALIÑADO TÍTULO SECCIÓN GALERÍA */
-#propertiesDevelopments {
-  text-align: center;
-  margin-bottom: 80px;
-}
 /* flechas prev y next de galería */
 .flechasGaleria {
   width: 15px;
   height: 30px;
 }
-
 .botonFlechasNext {
   background-color: transparent;
   border: none;
@@ -283,64 +254,128 @@ header nav {
 }
 .contenedorBotonesFlechas {
   display: flex;
-  gap: 40px;
+  gap: 50px;
+  
+  align-items: center;
+  margin-top: 59px;
 }
+
+/* IMÁGENES GALERÍA SECCIÓN PROPERTIES DEVELOPMENTS */
+#propertiesDevelopments img {
+  width: 100%;
+  overflow-x: hidden;
+}
+#propertiesDevelopments img:hover {
+  transform: translateY(-10px);
+  transition: 1 ease;
+}
+.propertiesDevelopmentsGalery {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  margin: 0 5%;
+}
+.container1,
+.container2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: fit-content;
+  gap: 20px;
+  overflow-x: hidden;
+}
+.container1 .item,
+.container2 .item {
+  overflow: hidden;
+}
+.container3 {
+  display: none;
+}
+#propertiesDevelopments .leyenda {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  position: relative;
+  bottom: 18%;
+  width: 100%;
+  height: 18%;
+  text-align: center;
+}
+#propertiesDevelopments .leyenda p {
+  font-size: 20px;
+}
+#propertiesDevelopments .leyenda h5 {
+  font-size: 25px;
+}
+/* ALIÑADO TÍTULO GALERÍA, SECCIÓN PROPERTIES DEVELOPMENTS */
+.tituloPropertiesDevelopment {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 /* SECCIÓN SERVICIOS CUADRO NEGRO DETRÁS DE IMAGEN*/
 #relleno {
-  width: 670px;
-  height: 1011px;
-  z-index: -1;
+  width: 70%;
+  height: 411px;
   background-color: #26282b;
   position: relative;
-  margin-bottom: 124px;
   margin-left: 122px;
 }
 /* IMAGEN SOBRE EL RELLENO NEGRO */
-#imagenContenedor {
+#imagenContenedor img {
+  width: 100%;
+  height: 330px;
   position: absolute;
   top: 10%;
   left: 20%;
 }
-/* TAMAÑO IMAGEN SECCIÓN SERVICIOS */
-#imagenContenedor {
-  width: 830px;
-  height: 830px;
+#services {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 0 20% 0;
 }
-.containerServices {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.logoServices {
+  display: flex;
 }
-.itemServicesFoto {
-  grid-column: 1 / 8;
+.textoServices {
+  margin-right: 10%;
 }
 .itemServices {
-  grid-column: 9 / 12;
+  margin-left: 10%;
 }
 .divisorServices {
   display: flex;
-  width: 30vw;
+  width: 100%;
   height: 4px;
   background-color: #df991b;
-  margin-top: 12%;
+  margin-top: 5%;
   margin-left: 2%;
 }
 
 /* FOOTER */
-/* PARTE SUPERIOR SOBRE EL FOOTER */
+/* SECCIÓN SUBSCRIBE, SOBRE EL FOOTER */
 .subscribe {
   background-color: #26282b;
   color: #fff;
-  font-size: 32px;
   transform: translate(0, -70%);
   position: absolute;
   left: 122px;
-  display: flex;
   gap: 16px;
   padding: 16px 50px;
-  width: 90%;
-  height: 312px;
+  width: 80%;
 }
-/* INPUT NOMBRE */
+/* FORM */
+.containerSubscribe {
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  justify-content: space-between;
+}
+.containerSubscribe .item {
+  margin: 20px 40px;
+}
+.containerSubscribe form {
+  display: grid;
+}
 .nameForm {
   background-color: transparent;
   color: #fff;
@@ -350,7 +385,6 @@ header nav {
   width: 100%;
   font-size: 20px;
 }
-/* INPUT EMAIL */
 #emailForm {
   background-color: transparent;
   border: solid 2px grey;
@@ -358,7 +392,6 @@ header nav {
   padding: 6px 16px;
   width: 100%;
 }
-
 /* FORMATO BOTON DEL FORM */
 footer #botonForm {
   background-color: transparent;
@@ -367,16 +400,20 @@ footer #botonForm {
   padding: 6px 32px;
   width: fit-content;
   color: orange;
+  justify-self: end;
 }
 
 /* FOOTER PARTE INFERIOR */
 footer {
   background-color: #000;
   position: relative;
-  width: 100%;
-  display: grid;
-  justify-content: center;
-  padding-top: 200px;
+}
+#containerFooter {
+  padding-top: 12%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5%;
+  color: #b4b7b7;
 }
 /* DIVISIÓN DEL PIE DE COPYRIGHT */
 .footer-bar {
@@ -387,5 +424,122 @@ footer {
 /* SECCIÓN COPYRIGHT */
 #copyright {
   text-align: center;
-  margin-bottom: 16px;
+  color: #fff;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 320px) {
+  body {
+    display: grid;
+    justify-content: center;
+  }
+  header nav {
+    justify-content: center;
+  }
+
+  .navLinks,
+  .menu,
+  .logo,  
+  .barra,
+  .larga {
+    display: none;
+  }
+  .mobileLogo {
+    height: 20px;
+    object-fit: cover;
+    width: auto;
+  }
+
+  #main {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(/Terminal/IMG/mobileMainBackground.png);
+    width: 100%;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .padreLupa {
+    margin-bottom: 50%;
+    justify-content: center;
+    margin-right: 25%;
+  }
+  .lupa {
+    top: 50%;
+    left: 100%;
+  }
+  .botonMain {
+    padding: 5% 15% 5% 15%;
+  }
+  #main input {
+    padding: 10% 35% 10% 15%;
+  }
+
+  .itemImagen {
+    grid-column: span 9;
+    overflow: hidden;
+  }
+  .active {
+    grid-column: span 3;
+    overflow: hidden;
+  }
+  .mobileImagen {
+    display: none;
+  }
+
+  .botonSection {
+    background-color: transparent;
+    padding: 5px 5px;
+    width: fit-content;
+    padding: 2px 8px 2px 8px;
+    border-radius: 100px;
+    border: 1px solid #000;
+    color: #df991b;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 390;
+    line-height: 15px;
+  }
+  .properties {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0px;
+  }
+
+  .rent {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .contenedorBotonesFlechas {
+    margin-bottom: 20px;
+    
+  }
+  .propertiesDevelopmentsGalery {
+    grid-template-rows: 1fr;
+  }
+  .container1,
+  .container2 {
+    display: none;
+  }
+  .container3 {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .container3 img {
+    width: 100px;
+    height: 200px;
+    margin: 0;
+  }
+
+  #relleno,
+  .subscribe {
+    display: none;
+  }
+
+  #containerFooter {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5%;
+    color: #b4b7b7;
+  }
 }
